@@ -46,15 +46,17 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-group :test do
-  gem 'cucumber-rails', require: false
-  gem 'database_cleaner'
-  gem 'vcr'
-  gem 'webmock'
-end
+gem 'rspec-rails', group: [:development, :test]
 
 group :development do
   gem 'hirb', require: false
   gem 'awesome_print', require: false
   gem 'interactive_editor', require: false
+end
+
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+  gem 'vcr'
+  gem 'webmock'
 end
